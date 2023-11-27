@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('form').addEventListener('submit', function (e) {
-        e.preventDefault(); 
+        e.preventDefault();
 
         // DATI FORM
         let hours = parseFloat(document.getElementById('hours').value);
@@ -30,19 +30,18 @@ document.addEventListener('DOMContentLoaded', function () {
         if (validCodes.includes(discountCode)) {
             let discount = total * 0.25;
             total -= discount;
-  
-        
+
+
         } else if (discountCode !== '') {
             alert('Discount code invalid');
 
-            discountCodeInput.style.color = 'red'; // da il colore rosso al codice non valido
+            discountCodeInput.style.color = 'red'; // Da il colore rosso al codice non valido
         }
 
         // MOSTRA PREZZO SOTTO AL FORM
         let resultElement = document.createElement('p');
         resultElement.innerHTML = 'Final price: ' + total.toFixed(2) + '€';
         document.querySelector('form').appendChild(resultElement);
-
 
     });
 });
