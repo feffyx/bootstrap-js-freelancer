@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
             total -= discount;
 
 
+
         } else if (discountCode !== '') {
             alert('Discount code invalid');
 
